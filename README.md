@@ -6,4 +6,4 @@ End-to-end deep learning model for low dimensional latent space extraction and m
 
 ## Example of results
 
-![image](https://user-images.githubusercontent.com/93058160/215609166-914cb8fb-4e05-4cfb-9375-d1e965e7b3e7.png)
+![image](https://user-images.githubusercontent.com/93058160/215609832-0836aace-a479-4a3f-b411-e61461a46b97.png)

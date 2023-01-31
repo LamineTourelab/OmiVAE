@@ -20,11 +20,11 @@ def MultiOmiVAE(input_path, expr_df, methy_df_list, random_seed=42, no_cuda=Fals
     device = torch.device('cuda:0' if not no_cuda and torch.cuda.is_available() else 'cpu')
     parallel = torch.cuda.device_count() > 1 and model_parallelism
 
-    # Sample ID and order that has both gene expression and DNA methylation data
-    sample_id=pd.read_csv("/home/ldap/ltoure/OmiVAE/Data/labels.csv", sep=",", index_col=0, dtype='str')
+    # Sample ID and order that has both gene expression and DNA mutation data
+    sample_id=pd.read_csv("path/labels.csv", sep=",", index_col=0, dtype='str')
 
     # Loading label
-    label = pd.read_csv('/home/ldap/ltoure/OmiVAE/Data/labels.csv', sep=',',index_col=0)
+    label = pd.read_csv('path/labels.csv', sep=',',index_col=0)
     class_num = len(label.response.unique())
     label_array = label['response'].values
 

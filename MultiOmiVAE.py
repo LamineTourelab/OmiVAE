@@ -9,7 +9,8 @@ from torch.utils.tensorboard import SummaryWriter
 from earlystoping import Earlystopping
 from sklearn import metrics
 
-
+# Here you will fine the MultiOmiVAE function which is an adapatation according to the original one. Instead of using DNA methylation, I used DNA mutation 
+# without chromosome listing. So the architecture was modiofied as the ExprOmiVAE. Genes x Samples is needed for all data.
 def MultiOmiVAE(input_path, expr_df, methy_df_list, random_seed=42, no_cuda=False, model_parallelism=False,
                 separate_testing=True, batch_size=32, latent_dim=128, learning_rate=1e-3, p1_epoch_num=50,
                 p2_epoch_num=100, output_loss_record=True, classifier=True, early_stopping=True):
